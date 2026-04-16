@@ -31,7 +31,7 @@ jobs:
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.AWS_TF_ROLE_ARN }}
+          role-to-assume: arn:aws:iam::740991959346:role/github-terraform-role
           aws-region: ${{ vars.AWS_REGION }}
 
       - name: Detect changed stacks
