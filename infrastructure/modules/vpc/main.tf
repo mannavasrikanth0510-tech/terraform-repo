@@ -7,7 +7,7 @@ resource "aws_vpc" "hello" {
 }
 
 resource "aws_subnet" "hello" {
-  vpc_id                  = aws_vpc.main.id
+  vpc_id                  = aws_vpc.hello.id
   cidr_block              = var.subnet_cidr
   map_public_ip_on_launch = true
 
