@@ -7,3 +7,7 @@ module "s3" {
     ManagedBy   = "terraform"
   }
 }
+
+terraform {
+  backend "s3" {}
+}
