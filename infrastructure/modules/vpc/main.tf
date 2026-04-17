@@ -5,3 +5,12 @@ resource "aws_vpc" "hello" {
     Name = var.name
   }
 }
+
+resource "aws_subnet" "hello" {
+  vpc_id     = aws_vpc.hello.id
+  cidr_block = var.subnet_cidr
+
+  tags = {
+    Name = var.name
+  }
+}
