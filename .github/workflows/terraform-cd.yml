@@ -90,5 +90,10 @@ jobs:
               -backend-config="dynamodb_table=${{ secrets.TF_LOCK_TABLE }}" \
               -backend-config="encrypt=true"
 
-            terraform -chdir="$DIR" apply -auto-approve -var="bucket_name=${{ secrets.BUCKET_NAME }}"
+            if [[ "$DIR" == *"s3"* ]]; then
+          terraform -chdir="$DIR" apply -auto-approve \
+          -var="bucket_name=${{ secrets.BUCKET_NAME }}"
+          else
+          terraform -chdir="$DIR" apply -auto-approve
+          fi
           done < stacks.txt
