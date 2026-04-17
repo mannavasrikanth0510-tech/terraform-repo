@@ -84,5 +84,10 @@ jobs:
 
             terraform -chdir="$DIR" fmt -recursive -check -diff
             terraform -chdir="$DIR" validate
-            terraform -chdir="$DIR" plan -out=plan.tfplan -var="bucket_name=${{ secrets.BUCKET_NAME }}"
+            if [[ "$DIR" == *"s3"* ]]; then
+            terraform -chdir="$DIR" plan -out=plan.tfplan \
+            -var="bucket_name=${{ secrets.BUCKET_NAME }}"
+            else
+            terraform -chdir="$DIR" plan -out=plan.tfplan
+            fi
           done < stacks.txt
