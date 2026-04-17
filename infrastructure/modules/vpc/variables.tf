@@ -3,7 +3,7 @@ variable "vpc_cidr" {
   type        = string
 }
 
-variable "name" {
+variable "vpc_name" {
   description = "Name of the VPC"
   type        = string
 }
@@ -18,8 +18,8 @@ variable "subnet_cidr" {
   type        = string
 }
 
-variable "name" {
-  description = "Subnet name"
+variable "subnet_name" {
+  description = "Name of the subnet"
   type        = string
   default     = "public-subnet"
 }
