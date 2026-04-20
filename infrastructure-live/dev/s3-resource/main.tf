@@ -8,6 +8,3 @@ module "s3" {
   }
 }
 
-terraform {
-  backend "s3" {}
-}
