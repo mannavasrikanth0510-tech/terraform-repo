@@ -21,5 +21,4 @@ variable "subnet_cidr" {
 variable "subnet_name" {
   description = "Name of the subnet"
   type        = string
-  default     = "public-subnet"
 }
