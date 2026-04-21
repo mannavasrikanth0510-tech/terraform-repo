@@ -18,3 +18,8 @@ variable "tags" {
   default = {}
 }
 
+variable "versioning_enabled" {
+  type    = bool
+  default = true
+}
+
