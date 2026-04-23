@@ -7,4 +7,3 @@ module "s3" {
     ManagedBy   = "terraform"
   }
 }
-
