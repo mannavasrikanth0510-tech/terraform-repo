@@ -98,3 +98,4 @@ jobs:
           terraform -chdir="$DIR" apply -auto-approve
           fi
           done < stacks.txt
+          
