@@ -91,3 +91,4 @@ jobs:
             terraform -chdir="$DIR" plan -out=plan.tfplan
             fi
           done < stacks.txt
+          
