@@ -78,7 +78,7 @@ jobs:
             terraform -chdir="$DIR" init -reconfigure \
               -backend-config="bucket=${{ secrets.TF_STATE_BUCKET }}" \
               -backend-config="key=${DIR}/terraform.tfstate" \
-              -backend-config="region=${{ vars.AWS_REGION }}" \
+              -backend-config="region=us-east-1" \
               -backend-config="dynamodb_table=${{ secrets.TF_LOCK_TABLE }}" \
               -backend-config="encrypt=true"
 
