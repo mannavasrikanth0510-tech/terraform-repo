@@ -15,8 +15,3 @@ variable "tags" {
   type    = map(string)
   default = {}
 }
-
-variable "versioning_enabled" {
-  type    = bool
-  default = true
-}
