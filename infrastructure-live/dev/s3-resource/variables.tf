@@ -3,7 +3,13 @@ variable "aws_region" {
   default = "us-east-1"
 }
 variable "bucket_name" {
-  type = string
+  type    = string
+  default = null
+}
+
+variable "bucket_prefix" {
+  type    = string
+  default = "terraform-repo-dev-"
 }
 variable "tags" {
   type    = map(string)
